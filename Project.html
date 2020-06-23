@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="EmpOps.css">
+<title>Project: Employment Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+</head>
+<body class='bodyall'>
+<table border ='0' width='95%'>
+	<tr valign='top'>
+		<td>
+		<table border ='0' width='100%'>
+			<tr valign='top'>
+			<td colspan = '3' class='mainTitle''>
+			Employee Information Management System
+			</td>
+			</tr>
+			<tr valign='top'>
+			<td ><span class='sspan'>Employee</span>
+			<button class='butMain' type="button" onclick = 'CreateNewEmployee()'>New</button>	
+			<button class='butMain' type="button" onclick = 'Update_Employee_Record()'>Update</button>
+			</td>		
+				<td><span class='sspan'>Extra Payments</span>
+			<button class='butMain' type="button" onclick = 'Create_Extra_Payments()'>New</button>			
+			</td>		
+			<td><span class='sspan'>Report</span>
+			<button class='butMain' type="button" onclick = 'Table_Employee_Records()'>Employee [Table]</button>
+			<button class='butMain' type="button" onclick = 'Display_Employee_Records()'>Employee</button>
+			<button class='butMain' type="button" onclick = 'Paycheck()'>Paycheck</button>			
+			<button class='butMain' type="button" onclick = 'Extra_Payment_Report()'>Extra Payment</button>	
+			<button class='butMain' type="button" onclick = 'Extra_Summary()'>Extra Summary</button>			
+			</td>
+			</tr>
+			<tr valign='top'>
+			<td class='action'>
+			<input type = 'text' id = 'UserAction' maxlength='60' readonly style='text-align:left;'>
+			</td>
+			<td class='action'>&nbsp;</td>
+			<td align = 'right' class='action'>
+			<input type = 'text' id = 'RecordAction' maxlength='60' readonly style='text-align:right;'>
+			</td>			
+			</tr>			
+		</table>
+		</td>
+	</tr>
+	<tr valign='top'>
+		<td>
+		<table border ='0' width='100%'>
+			<tr valign='top'>
+			<td>
+				<table border ='0' id='WorkArea' style='margin-top: 0px;' >
+						<tr align=''></tr>
+				</table>
+				<p id ='Report' style='margin-top: 0px;'></p>					
+			</td>
+			</tr>
+		</table>
+		</td>
+	</tr>	
+	<tr valign='top'>
+		<td>
+			<button type="button" class="collapsible" >Database:</button>
+			<div class="content">		
+			<table border ='1' style='border-collapse: collapse;' width='100%'>
+				<tr valign='top'>
+				<td colspan = '2' > Data files </td>
+				</tr>			
+				<tr valign='top'>
+				<td>
+				<label for="Employee_DAT">EMPLOYEE.DAT</label><br>	
+				<textarea id='EMPLOYEE_DAT' cols='60' rows='6'></textarea>
+				</td>
+				<td>
+				<label for="UEMPLOYEE_DAT">UEMPLOYEE.DAT</label><br>	
+				<textarea id='UEMPLOYEE_DAT' cols='60' rows='6'></textarea>	
+				</td>
+				</tr>
+				<tr>
+				<td colspan ='2'>
+				<label for="EXTRAPay_DAT">EXTRA.DAT</label><br>	
+				<textarea id='EXTRAPay_DAT' cols='95' rows='6'></textarea>			
+				</td>
+				</tr>
+			</table>
+		</div>
+		</td>
+	</tr>
+</table> 
+<table border ='1' style='border-collapse: collapse;' width='95%'>
+	<tr valign='top'>
+		<td colspan = '' >
+			<p style='background-color:green;color:yellow;'>Project description:</p>
+			<button type="button" class="collapsible">Project A [2 hours]</button>
+			<div class="content">
+			<p id = 'ProjA' ></p>
+			</div>
+			<button type="button" class="collapsible">Project B [8 hours]</button>
+			<div class="content">
+			<p id = 'ProjB'></p>
+			</div>
+			<button type="button" class="collapsible">Project C [2 hours]</button>
+			<div class="content">
+			<p id = 'ProjC'></p>
+			</div>
+		</td>
+	</tr>
+</table> 
+<p id='PA' ></p>
+<script src="Global.js"></script>
+<script src="DisplayEmployees.js"></script>
+<script src="CreateNewEmployee.js"></script>
+<script src="ValidationCheck.js"></script>
+<script src="SaveEmployeeRecords.js"></script>
+<script src="UpdateEmployee.js"></script>
+<script src="ExtraPayments.js"></script>
+<script src="DataFiles.js"></script>
+<script src="ProjectABC.js"></script>
+</body>
+</html>
